@@ -6,7 +6,7 @@ const App = () =>{
   return (
     <>
     <NavBar />
-    <ItemListContainer greeting="Bienvenido al sitio de compra de criptomonedas" />
+    <ItemListContainer />
     </>
   )
 }
