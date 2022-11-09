@@ -15,16 +15,16 @@ const NavBar = () =>{
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Stablecoins</a>
+                  <a className="nav-link" href="/">Stablecoins</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Blockchain</a>
+                  <a className="nav-link" href="/">Blockchain</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Defi</a>
+                  <a className="nav-link" href="/">Defi</a>
                 </li>
                 <li className="nav-item ">
-                  <a className="nav-link d-flex" href="#"></a>
+                  <a className="nav-link d-flex" href="/"></a>
                 </li>
               </ul>
              </div>
