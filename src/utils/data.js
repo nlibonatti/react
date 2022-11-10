@@ -7,13 +7,10 @@ export const data = [
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
       capacity: 1500,
       image: [
-        "https://res.cloudinary.com/bodegas-del-sur/image/upload/v1631316114/BodegasDelSur/01_1619706181.webp"
+        "https://assets.coingecko.com/coins/images/1/large/bitcoin.png"
       ],
-      category: {
-        name: "Blockchain",
-        id: 1,
+      category:"Blockchain", 
       },
-    },
 
     {
         id: 2,
@@ -23,12 +20,9 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
         capacity: 1500,
         image: [
-          "https://res.cloudinary.com/bodegas-del-sur/image/upload/v1631316114/BodegasDelSur/01_1619706181.webp"
+          "https://assets.coingecko.com/coins/images/279/large/ethereum.png"
         ],
-        category: {
-          name: "Blockchain",
-          id: 1,
-        },
+        category: "Blockchain",
       },
 
       {
@@ -39,12 +33,9 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
         capacity: 1500,
         image: [
-          "https://res.cloudinary.com/bodegas-del-sur/image/upload/v1631316114/BodegasDelSur/01_1619706181.webp"
+          "https://assets.coingecko.com/coins/images/4713/large/matic-token-icon.png"
         ],
-        category: {
-          name: "Blockchain",
-          id: 1,
-        },
+        category: "Blockchain" 
       },
 
       {
@@ -55,12 +46,9 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
         capacity: 1500,
         image: [
-          "https://res.cloudinary.com/bodegas-del-sur/image/upload/v1631316114/BodegasDelSur/01_1619706181.webp"
+          "https://assets.coingecko.com/coins/images/4128/large/solana.png"
         ],
-        category: {
-          name: "Blockchain",
-          id: 1,
-        },
+        category: "Blockchain",
       },
 
       {
@@ -71,12 +59,9 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
         capacity: 1500,
         image: [
-          "https://res.cloudinary.com/bodegas-del-sur/image/upload/v1631316114/BodegasDelSur/01_1619706181.webp"
+          "https://assets.coingecko.com/coins/images/9956/large/4943.png"
         ],
-        category: {
-          name: "Stablecoin",
-          id: 2,
-        },
+        category: "Stablecoin",
       },
 
       {
@@ -87,12 +72,9 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
         capacity: 1500,
         image: [
-          "https://res.cloudinary.com/bodegas-del-sur/image/upload/v1631316114/BodegasDelSur/01_1619706181.webp"
+          "https://assets.coingecko.com/coins/images/6319/large/USD_Coin_icon.png"
         ],
-        category: {
-          name: "Stablecoin",
-          id: 2,
-        },
+        category: "Stablecoin",
       },
 
       {
@@ -103,28 +85,9 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
         capacity: 1500,
         image: [
-          "https://res.cloudinary.com/bodegas-del-sur/image/upload/v1631316114/BodegasDelSur/01_1619706181.webp"
+          "https://assets.coingecko.com/coins/images/325/large/tether.png"
         ],
-        category: {
-          name: "Stablecoin",
-          id: 2,
-        },
-      },
-
-      {
-        id: 8,
-        name: "Bitcoin",
-        stock: 100,
-        cost: 20000,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
-        capacity: 1500,
-        image: [
-          "https://res.cloudinary.com/bodegas-del-sur/image/upload/v1631316114/BodegasDelSur/01_1619706181.webp"
-        ],
-        category: {
-          name: "Blockchain",
-          id: 1,
-        },
+        category: "Stablecoin", 
       },
 
       {
@@ -135,12 +98,9 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
         capacity: 1500,
         image: [
-          "https://res.cloudinary.com/bodegas-del-sur/image/upload/v1631316114/BodegasDelSur/01_1619706181.webp"
+          "https://assets.coingecko.com/coins/images/12504/large/uniswap-uni.png"
         ],
-        category: {
-          name: "Defi",
-          id: 3,
-        },
+        category: "Defi",
       },
 
       {
@@ -151,12 +111,9 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
         capacity: 1500,
         image: [
-          "https://res.cloudinary.com/bodegas-del-sur/image/upload/v1631316114/BodegasDelSur/01_1619706181.webp"
+          "https://assets.coingecko.com/coins/images/12645/large/AAVE.png"
         ],
-        category: {
-          name: "Defi",
-          id: 3,
-        },
+        category: "Defi",
       },
 
     {
@@ -167,12 +124,9 @@ export const data = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
         capacity: 1500,
         image: [
-          "https://res.cloudinary.com/bodegas-del-sur/image/upload/v1631316114/BodegasDelSur/01_1619706181.webp"
+          "https://assets.coingecko.com/coins/images/10775/large/COMP.png"
         ],
-        category: {
-          name: "Defi",
-          id: 3,
-        },
+        category: "Defi",
       }  
 
   ];

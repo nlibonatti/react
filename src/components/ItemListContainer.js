@@ -16,6 +16,8 @@ const ItemListContainer = () => {
 
   return (
     <>
+       <div className="container-fluid">
+       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
     {
       datos.map(item => (
         <Coin
@@ -26,6 +28,8 @@ const ItemListContainer = () => {
         image={item.image} />
       ))
     }
+        </div>
+        </div>
     </>
   )
 }
