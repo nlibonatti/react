@@ -9,7 +9,8 @@ export const data = [
       image: [
         "https://assets.coingecko.com/coins/images/1/large/bitcoin.png"
       ],
-      category:"Blockchain", 
+      category:"Blockchain",
+      categoryId: 1,
       },
 
     {
@@ -23,6 +24,7 @@ export const data = [
           "https://assets.coingecko.com/coins/images/279/large/ethereum.png"
         ],
         category: "Blockchain",
+        categoryId: 1,
       },
 
       {
@@ -35,7 +37,9 @@ export const data = [
         image: [
           "https://assets.coingecko.com/coins/images/4713/large/matic-token-icon.png"
         ],
-        category: "Blockchain" 
+        category: "Blockchain",
+        categoryId: 1,
+
       },
 
       {
@@ -49,6 +53,7 @@ export const data = [
           "https://assets.coingecko.com/coins/images/4128/large/solana.png"
         ],
         category: "Blockchain",
+        categoryId: 1,
       },
 
       {
@@ -62,6 +67,7 @@ export const data = [
           "https://assets.coingecko.com/coins/images/9956/large/4943.png"
         ],
         category: "Stablecoin",
+        categoryId: 2,
       },
 
       {
@@ -75,6 +81,7 @@ export const data = [
           "https://assets.coingecko.com/coins/images/6319/large/USD_Coin_icon.png"
         ],
         category: "Stablecoin",
+        categoryId: 2,
       },
 
       {
@@ -87,7 +94,8 @@ export const data = [
         image: [
           "https://assets.coingecko.com/coins/images/325/large/tether.png"
         ],
-        category: "Stablecoin", 
+        category: "Stablecoin",
+        categoryId: 2,
       },
 
       {
@@ -101,6 +109,7 @@ export const data = [
           "https://assets.coingecko.com/coins/images/12504/large/uniswap-uni.png"
         ],
         category: "Defi",
+        categoryId: 3,
       },
 
       {
@@ -114,6 +123,7 @@ export const data = [
           "https://assets.coingecko.com/coins/images/12645/large/AAVE.png"
         ],
         category: "Defi",
+        categoryId: 3,
       },
 
     {
@@ -127,6 +137,7 @@ export const data = [
           "https://assets.coingecko.com/coins/images/10775/large/COMP.png"
         ],
         category: "Defi",
+        categoryId: 3,
       }  
 
   ];
