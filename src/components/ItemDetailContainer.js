@@ -1,4 +1,5 @@
 
+import { useParams } from 'react-router-dom'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { customFetch } from '../utils/customFetch'
@@ -8,9 +9,10 @@ const { data } = require ('../utils/data')
 
 const ItemDetailContainer = () => {
   const [dato, setDato] = useState({});
+  const { id } = useParams();
 
   useEffect(() => {
-    customFetch (2000, data[7])
+    customFetch (2000, data.find(item => item.id == id))
     .then(response => setDato(response))
     .catch(err => console.log(err))
   }, [])

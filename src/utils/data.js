@@ -11,6 +11,8 @@ export const data = [
       ],
       category:"Blockchain",
       categoryId: 1,
+      idC: 1,
+
       },
 
     {
@@ -25,6 +27,7 @@ export const data = [
         ],
         category: "Blockchain",
         categoryId: 1,
+        idC: 2,
       },
 
       {
@@ -39,6 +42,7 @@ export const data = [
         ],
         category: "Blockchain",
         categoryId: 1,
+        idC: 3,
 
       },
 
@@ -54,6 +58,7 @@ export const data = [
         ],
         category: "Blockchain",
         categoryId: 1,
+        idC: 4,
       },
 
       {
@@ -68,6 +73,7 @@ export const data = [
         ],
         category: "Stablecoin",
         categoryId: 2,
+        idC: 5,
       },
 
       {
@@ -82,6 +88,7 @@ export const data = [
         ],
         category: "Stablecoin",
         categoryId: 2,
+        idC: 6,
       },
 
       {
@@ -96,6 +103,7 @@ export const data = [
         ],
         category: "Stablecoin",
         categoryId: 2,
+        idC: 7,
       },
 
       {
@@ -110,6 +118,7 @@ export const data = [
         ],
         category: "Defi",
         categoryId: 3,
+        idC: 8,
       },
 
       {
@@ -124,6 +133,7 @@ export const data = [
         ],
         category: "Defi",
         categoryId: 3,
+        idC: 9,
       },
 
     {
@@ -138,6 +148,7 @@ export const data = [
         ],
         category: "Defi",
         categoryId: 3,
+        idC: 10,
       }  
 
   ];

@@ -37,6 +37,7 @@ const ItemListContainer = () => {
       datos.map(item => (
         <Coin
         key={item.id}
+        id={item.idC}
         name={item.name}
         cost={item.cost}
         stock={item.stock}

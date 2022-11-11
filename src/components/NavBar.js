@@ -17,10 +17,10 @@ const NavBar = () =>{
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                <Link to="/category/1"><a className="nav-link" href="/category/1">Stablecoins</a></Link>
+                <Link to="/category/1"><a className="nav-link" href="/category/1">Blockchain</a></Link>
                 </li>
                 <li className="nav-item">
-                <Link to="/category/2"><a className="nav-link" href="/category/2">Blockchain</a></Link>
+                <Link to="/category/2"><a className="nav-link" href="/category/2">Stablecoins</a></Link>
                 </li>
                 <li className="nav-item">
                 <Link to="/category/3"><a className="nav-link" href="/category/3">Defi</a></Link>
