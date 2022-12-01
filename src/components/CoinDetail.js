@@ -1,5 +1,20 @@
-import React from 'react'
-const DetailCoin = ({item}) => {
+import React, { useContext } from 'react'
+import CoinCount from '../components/CoinCount'
+import { useState } from 'react';
+import { Link } from 'react-router-dom' 
+import { CartContext } from './CartContext';
+
+const DetailCoin = ({ item }) => {
+
+const [itemCount, setItemCount] = useState(0);
+
+const {addToCart} = useContext(CartContext);
+
+const onAdd = (qty) => {
+      alert("Selecionaste " + qty + " items.");
+      setItemCount(qty)
+      addToCart (item , qty)
+  }
 
     return (
     <>  
@@ -15,8 +30,13 @@ const DetailCoin = ({item}) => {
                   <li className="list-group-item">Stock: {item.stock}</li>
                 </ul>
                 <div className="card-body">
-                  <a href="/" className="card-link">Add to Cart</a>
-                  <a href="/" className="card-link">Rate</a>
+
+                {
+                        itemCount === 0
+                        ? <CoinCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
+                        : <Link to='/cart'><button>CheckOut</button></Link>
+                  }
+
                 </div>
                 </div>
                 </div>
