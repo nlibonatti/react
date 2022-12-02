@@ -20,7 +20,6 @@ const CartContextProvider = ({ children }) => {
                 }
             ]);
         } else {
-            //al encontrarlo, entonces aumentamos el qty de ese producto
             found.qtyItem += qty;
         }
     }
@@ -35,12 +34,22 @@ const CartContextProvider = ({ children }) => {
     }
 
     const cartQty = () => {
-        let qtyTotal = cartList.map (item => item.qtyItem)
+        let qtyTotal = cartList.map(item => item.qtyItem)
         return qtyTotal.reduce(((valueI, valueT) => valueI + valueT), 0 )
     }
 
+    const totalCart = (idItem) => {
+        let totalSale = cartList.map(item => item.idItem).indexOf(idItem)
+        return cartList[totalSale].costItem * cartList[totalSale].qtyItem 
+    }
+
+    const totalBuy = () => {
+        let totalPerItem = cartList.map(item => totalCart(item.idItem));
+        return totalPerItem.reduce((previousValue, currentValue) => previousValue + currentValue);
+    }
+
     return (
-        <CartContext.Provider value={{cartList, addToCart, removeList, deleteItem, cartQty}}>
+        <CartContext.Provider value={{cartList, addToCart, removeList, deleteItem, cartQty, totalCart, totalBuy}}>
             { children }
         </CartContext.Provider>
     );
