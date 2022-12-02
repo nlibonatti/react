@@ -34,9 +34,13 @@ const CartContextProvider = ({ children }) => {
         setCartList(result);
     }
 
+    const cartQty = () => {
+        let qtyTotal = cartList.map (item => item.qtyItem)
+        return qtyTotal.reduce(((valueI, valueT) => valueI + valueT), 0 )
+    }
 
     return (
-        <CartContext.Provider value={{cartList, addToCart, removeList, deleteItem}}>
+        <CartContext.Provider value={{cartList, addToCart, removeList, deleteItem, cartQty}}>
             { children }
         </CartContext.Provider>
     );
