@@ -5,25 +5,34 @@ import { useState, useEffect } from 'react'
 import { data } from '../utils/data'
 import { customFetch } from '../utils/customFetch'
 import { useParams } from 'react-router-dom'
-
+import { collection, getDocs } from "firebase/firestore"; 
+import { db } from "../firebaseConfig"
 
 const ItemListContainer = () => {
   const [datos, setDatos] = useState([])
   const { idCategory } = useParams()
 
-  useEffect(() => {
+  useEffect(async() => {
 
-    if (idCategory == undefined) {
+    if (idCategory === undefined) {
+        const querySnapshot = await getDocs(collection(db, "products"));
+        const dataFromFirebase = querySnapshot.docs.map(item => ({
+          id: item.id,
+          ...item.data()
 
-        customFetch (2000, data)
-        .then(response => setDatos(response))
-        .catch(err => console.log(err))
+        }))
+          console.log(dataFromFirebase)
+        
         
     } else {
+        // customFetch (2000, data.filter(item => item.categoryId == idCategory))
+        // .then(response => setDatos(response))
+        // .catch(err => console.log(err))
 
-        customFetch (2000, data.filter(item => item.categoryId == idCategory))
-        .then(response => setDatos(response))
-        .catch(err => console.log(err))
+          const querySnapshot = await getDocs(collection(db, "products"));
+          querySnapshot.forEach((doc) => {
+          console.log(`${doc.id} => ${doc.data()}`);
+          });
     }
 
   }, [idCategory])
@@ -36,7 +45,7 @@ const ItemListContainer = () => {
     {
       datos.map(item => (
         <Coin
-        key={item.id}
+        key={item.idC}
         id={item.idC}
         name={item.name}
         cost={item.cost}
