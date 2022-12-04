@@ -17,8 +17,7 @@ const Coin = (props) => {
                 <li className="list-group-item">Stock: {props.stock}</li>
               </ul>
               <div className="card-body">
-                <a href="/" className="card-link">Add to Cart</a>
-                <Link to={`/item/${props.id}`}><div href="/" className="card-link">Details</div></Link>
+                <Link to={`/item/${props.id}`}><div href="/" className="card-link">Buy</div></Link>
               </div>
               </div>
               </div>

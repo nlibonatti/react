@@ -7,35 +7,45 @@ import { customFetch } from '../utils/customFetch'
 import { useParams } from 'react-router-dom'
 import { collection, getDocs } from "firebase/firestore"; 
 import { db } from "../firebaseConfig"
+import { query , where } from 'firebase/firestore'
+
 
 const ItemListContainer = () => {
   const [datos, setDatos] = useState([])
   const { idCategory } = useParams()
 
-  useEffect(async() => {
-
-    if (idCategory === undefined) {
-        const querySnapshot = await getDocs(collection(db, "products"));
-        const dataFromFirebase = querySnapshot.docs.map(item => ({
-          id: item.id,
-          ...item.data()
-
-        }))
-          console.log(dataFromFirebase)
-        
-        
-    } else {
-        // customFetch (2000, data.filter(item => item.categoryId == idCategory))
-        // .then(response => setDatos(response))
-        // .catch(err => console.log(err))
-
-          const querySnapshot = await getDocs(collection(db, "products"));
-          querySnapshot.forEach((doc) => {
-          console.log(`${doc.id} => ${doc.data()}`);
-          });
-    }
-
-  }, [idCategory])
+  useEffect(() => {
+    // creamos una función que va a obtener los datos de firebase
+            const getData = async () => {
+    // con una condicional, si no tiene categorías, 
+                const queryRef = !idCategory
+    // va a traer todos los productos
+                    ? collection(db, "products")
+    // si tiene categorías, firebase va a filtrarlas
+                    : query(
+                        collection(db, "products"),
+                        //where("categoryId", "==", idCategory)
+                    );
+    // recibimos los datos
+                const response = await getDocs(queryRef);
+    // y hacemos un map para crear objetos con esos datos.
+                const productos = response.docs.map((doc) => {
+                    const newProduct = {
+                        ...doc.data(),
+                        id: doc.id,
+                    };
+    // lo retornamos
+                    return newProduct;
+                });
+                setTimeout(() => {
+    // simulamos una demora de 2' y actualizamos los 2 estados.
+                    setDatos(productos);
+                }, 2000)
+            };
+    // llamamos a la función
+            getData();
+    
+        }, [idCategory])
 
 
   return (
