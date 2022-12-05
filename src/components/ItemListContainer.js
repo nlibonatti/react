@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { data } from '../utils/data'
 import { customFetch } from '../utils/customFetch'
 import { useParams } from 'react-router-dom'
-import { collection, getDocs } from "firebase/firestore"; 
+import { collection, getDocs, orderBy } from "firebase/firestore"; 
 import { db } from "../firebaseConfig"
 import { query , where } from 'firebase/firestore'
 
@@ -20,12 +20,9 @@ const ItemListContainer = () => {
     // con una condicional, si no tiene categorías, 
                 const queryRef = !idCategory
     // va a traer todos los productos
-                    ? collection(db, "products")
+                    ? query(collection(db, 'products'), orderBy('name'))
     // si tiene categorías, firebase va a filtrarlas
-                    : query(
-                        collection(db, "products"),
-                        //where("categoryId", "==", idCategory)
-                    );
+                    : query(collection(db, 'products'), where('categoryId', '==', idCategory))
     // recibimos los datos
                 const response = await getDocs(queryRef);
     // y hacemos un map para crear objetos con esos datos.
@@ -37,15 +34,15 @@ const ItemListContainer = () => {
     // lo retornamos
                     return newProduct;
                 });
-                setTimeout(() => {
-    // simulamos una demora de 2' y actualizamos los 2 estados.
                     setDatos(productos);
-                }, 2000)
+
             };
     // llamamos a la función
             getData();
     
         }, [idCategory])
+
+        console.log(idCategory)
 
 
   return (
