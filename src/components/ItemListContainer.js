@@ -22,9 +22,10 @@ const ItemListContainer = () => {
     // va a traer todos los productos
                     ? query(collection(db, 'products'), orderBy('name'))
     // si tiene categorías, firebase va a filtrarlas
-                    : query(collection(db, 'products'), where('categoryId', '==', idCategory))
+                    : query(collection(db, 'products'), where('categoryId', '==', Number(idCategory)))
     // recibimos los datos
                 const response = await getDocs(queryRef);
+    // y hacemos un map para crear objetos con esos datos.
     // y hacemos un map para crear objetos con esos datos.
                 const productos = response.docs.map((doc) => {
                     const newProduct = {
