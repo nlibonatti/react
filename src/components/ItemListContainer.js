@@ -26,7 +26,6 @@ const ItemListContainer = () => {
     // recibimos los datos
                 const response = await getDocs(queryRef);
     // y hacemos un map para crear objetos con esos datos.
-    // y hacemos un map para crear objetos con esos datos.
                 const productos = response.docs.map((doc) => {
                     const newProduct = {
                         ...doc.data(),
@@ -54,7 +53,7 @@ const ItemListContainer = () => {
       datos.map(item => (
         <Coin
         key={item.idC}
-        id={item.idC}
+        id={item.id}
         name={item.name}
         cost={item.cost}
         stock={item.stock}
