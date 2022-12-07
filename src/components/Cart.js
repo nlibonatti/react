@@ -1,8 +1,9 @@
 import React from 'react'
 import { useContext } from 'react';
 import { CartContext } from './CartContext';
-import { collection, serverTimestamp , setDoc , doc } from 'firebase/firestore';
+import { collection, serverTimestamp , setDoc , doc , updateDoc, increment} from 'firebase/firestore';
 import { db } from "../firebaseConfig"
+import { async } from '@firebase/util';
 
 const Cart = () => {
 
@@ -35,7 +36,13 @@ const Cart = () => {
         createOrdenFirebase()
             .then(response => {
                 alert ("Orden número: " + response.id)
-                context.removeList()
+                context.cartList.forEach(async(item) => {
+                    const itemRef = doc( db, "products", item.idItem);
+                    await updateDoc (itemRef, {
+                        stock: increment(-item.qtyItem)
+                    });
+                });
+                context.removeList();
             })
             .catch(err => console.log(err))
         }
@@ -53,9 +60,11 @@ const Cart = () => {
 
         {
             context.cartList.length > 0 &&
+            <>
             <p>{context.totalBuy()}</p>
+            <button onClick={createOrder}>Check Out</button>
+            </>
         }
-        <button onClick={createOrder}>Check Out</button>
 
 
         </>
